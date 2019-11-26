@@ -1,0 +1,12 @@
+C.i.rows: 47
+
+C.ii.columns: 5
+
+C.iii.function: ngram-fingerprint
+
+C.iv.GREL_brandname: if(isNull(cells["brand_name"].value), "Unbranded", value)
+
+C.v.GREL_highpriced: if(cells["price"].value.toNumber() > 100, 1, 0)
+
+C.vi.GREL_hasoffer: if(or(cells["item_description"].value.toLowercase().contains("offer"),or(cells["item_description"].value.toLowercase().contains("discount"), cells["item_description"].value.toLowercase().contains("sale"))),1,0)
+
