@@ -1,0 +1,26 @@
+
+@media print {
+    div.charts {
+        /*display: block !important;*/
+        page-break-before: always;
+        padding: 35px;
+        /*border: 1px solid #ccc;*/
+    }
+
+}
+
+.title{
+    font-size: 1.5em;
+    fill: black;
+}
+.line-path {
+    fill: none;
+    /*stroke: maroon;*/
+    stroke-width: 1;
+    stroke-linejoin: round;
+}
+
+.axis-label {
+    font-size: 2.5em;
+    fill: #8E8883;
+}

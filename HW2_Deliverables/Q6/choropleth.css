@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.state{
+    stroke: black;
+    stroke-opacity: 0.1;
+}
+
+.state:hover {
+    /*fill: lightgreen;*/
+    stroke: black;
+    stroke-width: 3px;
+    stroke-opacity: .5;
+    border: black;
+}
+
+.data-tooltip {
+    background: rgba(0,0,0, 0.9);
+    border-radius: 6px;
+    color: white;
+    padding: 1em;
+    font-size: 12px;
+    position: absolute;
+}
