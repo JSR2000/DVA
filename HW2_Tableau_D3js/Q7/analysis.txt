@@ -1,0 +1,45 @@
+
+1. Ease to develop
+        R: Easier to develop, significantly less coding required than d3 as we can use many existing libraries.
+		
+		Tableau: Easiest to develop of all 3, minimum coding required.
+        
+		D3: extensive coding for even a simple graph. we write code for drawing axis, creating circles, rectangles and everything 
+			we see in the chart is explicitly coded in d3/svg/html.
+			
+2. Ease to maintain the visualization
+        R: I find this easy to maintain too but again this does not have flexifility as D3 either.
+
+        Tableau: Easy to maintain but limited user control.
+        
+		D3: Once a well strucured D3 program is ready and functional, i did not find it difficult to maintain it or tweak it as needed.
+			In fact, i find it super flexible as you control more parameters for vizualisation than the other two.
+		
+
+3. Usability of visualization developed for end users
+        R: I would guess, as the language itself is being used more by data engineers, data scientists for data exploration and patterns, Predictions etc, 
+			It must have smaller user base than the other two. Best of all three for the data exploration and analysis purpose as it creates different
+			exploratory graphs like correlation, scattor plot and other in seconds.
+
+        Tableau: Dashboard charts for specific projects, monitoring systems or In pesentations to Project Teams, Management people or other decision makers. 
+		
+        D3: This would probably fit wherever a chart can fit because of its flexibility. But more appropriate for charts which needs a high level of customization.
+			User base must be significantly large as we see all these interactive charts in all different websites, including news, stocks etc.
+			Simple charts are better off to other tools, specifically to tableau.
+		
+4. Scalability of visualization to “large” dat
+        R: As per RBloggers, 1M rows are easy but needs extra efforts as the data grow from here.
+
+        Tableau: Tableau seems to have the best scalability as i read it could handle upto 3.5 GB ( upto 600M+ rows) (Stack Overflow)
+        D3: Does not seem to be very popular for large datasets probably because it has to handle large number of DOM elements (stackoverflow).
+		
+4. System requirements to run the visualization
+        R: Its a free software, No software license is needed. Needs less memory and space than tableau.
+
+        Tableau: Tableau licence needed. Needs most memory & Space of them all (2 & 1.5 gb as per google). Compatible browsers recommended.
+		
+        D3: No Licensce needed. Good comaptibility to all different browsers. System must have java installed and good configuration if data is large.
+
+
+ 
+

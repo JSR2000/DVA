@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EarthQuakes</title>
+    <script src="../lib/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <link rel="stylesheet" href="linecharts.css">
+
+        <div class = "charts">
+
+            <script>
+                var container = d3.select(".container");
+                var chart = container.append("section");
+                var width = 1000;
+                var height = 550;
+                var margin = { top:100, right: 100, bottom: 100, left: 100};
+                var innerWidth = width - margin.left - margin.right;
+                var innerHeight = height - margin.top - margin.bottom;
+                var svg = chart.append('svg')
+                .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+                .append("g")
+                .attr("transform", `translate(${margin.left}, ${margin.top})`);
+                var g = svg.append("g")
+                .attr('transform', `translate(${margin.left}, ${margin.top})`);
+                var title1 = "Worldwide Earthquake stats 2000-2015";
+                var chart_num = 1;
+            </script>
+
+            <script src="linecharts.js"></script>
+
+            <script>
+            // Read the input file
+            d3.csv('earthquakes.csv').then(data1 => {
+                    data1.forEach(d => {
+                        d.year = new Date(`01/01/${d.year}`);
+                        d["Estimated Deaths"] = +d["Estimated Deaths"];
+                    });
+                    var x = data1;
+                    render(data1, g, 1, title1);
+                });
+            </script>
+
+        </div>
+
+        <div class="charts">
+
+            <script>
+                var chart2 = container.append("section");
+                 var svg2 = chart2.append('svg')
+                    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+                 var g2 = svg2.append("g")
+                    .attr('transform', `translate(${margin.left}, ${margin.top})`);
+                 const title2 = "Worldwide Earthquake stats 2000-2015 with symbols"
+                // Read the input file
+                d3.csv('earthquakes.csv').then(data1 => {
+                    data1.forEach(d => {
+                        d.year = new Date(`01/01/${d.year}`);
+                        d["Estimated Deaths"] = +d["Estimated Deaths"];
+                    });
+                    render(data1, g2, 2, title2);
+                });
+            </script>
+
+        </div>
+
+        <div class="charts">
+
+            <script>
+                var chart3 = container.append("section");
+                var svg3 = chart3.append('svg')
+                    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+                var g3 = svg3.append("g")
+                    .attr('transform', `translate(${margin.left}, ${margin.top})`);
+                const title3 = "Worldwide Earthquake stats 2000-2015 with square root scale"
+            // Read the input file
+                d3.csv('earthquakes.csv').then(data1 => {
+                    data1.forEach(d => {
+                        //d.year = parseDate(new Date(`01/01/${d.year}`));
+                        d.year = new Date(`01/01/${d.year}`);
+                        d["Estimated Deaths"] = +d["Estimated Deaths"];
+                    });
+                    render(data1,g3, 3, title3);
+                });
+            </script>
+
+        </div>
+
+        <div class="charts">
+            <script>
+                var chart4 = container.append("section");
+                var svg4 = chart4.append('svg')
+                    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+                var g4 = svg4.append("g")
+                    .attr('transform', `translate(${margin.left}, ${margin.top})`);
+                const title4 = "Worldwide Earthquake stats 2000-2015 log scale"
+                // Read the input file
+                d3.csv('earthquakes.csv').then(data1 => {
+                    data1.forEach(d => {
+                        d.year = new Date(`01/01/${d.year}`);
+                        d["Estimated Deaths"] = +d["Estimated Deaths"];
+                    });
+                    render(data1,g4, 4, title4);
+                });
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

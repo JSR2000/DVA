@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HeatMap</title>
+    <link rel="stylesheet" href="heatmap.css">
+    <script src="../lib/d3.v5.min.js"></script>
+</head>
+<body>
+
+<div id = "container">
+    <div class="heatmap">
+        <h2> Visualizing Earthquake Counts State 2010-2015 (M3+) </h2>
+    </div>
+    <div id = "temp">
+        <label for="menus" style="position: absolute">Range of</label>
+
+
+        <select id="menus"></select>
+    </div>
+    <div id="tooltip"></div>
+    <svg id="svg" width="1000" height="560"></svg>
+    <script src = "heatmap.js"></script>
+
+
+</div>
+</body>
+</html>

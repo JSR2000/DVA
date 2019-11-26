@@ -1,0 +1,2 @@
+Both methods normalizes the extreme low/high values, which in turn changes the y-scale values and reduces the cluttering of lines. We can see the extremely close values are now visibly distant and extreme highs have come down too. Y-scale changed for Logscale, tick-spacing changed for SQRT.
+
