@@ -1,0 +1,5 @@
+1. Aggregating many decision trees limits variance, overfitting and error due to bias. Using attributes with more information gain for splits provides a reliable feature importance estimate. Cross validation not needed. One of the best performing supervised learning technique, which has better accuracy than decision trees most of the times.  
+
+2. it takes around 65 to 75 seconds to run.
+
+3. approximately 90 % Accuracy
